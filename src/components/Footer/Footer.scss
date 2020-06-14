@@ -1,0 +1,16 @@
+.footer_cont {
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    margin-left: 25%;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+a {
+    padding: 0 10px;
+}

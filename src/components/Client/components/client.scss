@@ -1,0 +1,19 @@
+.top_div {
+    margin-top: 5%;
+    padding: 120px;
+}
+
+.btn-primary {
+    background-color: #2dd771;
+    border: 1px solid #2dd771;
+    width:  50%;
+    margin: 10px auto;
+    &:hover {
+        background-color: #2dd771;
+        border: 1px solid #2dd771;
+    }
+}
+
+.dropdown {
+    top: -9px;
+}

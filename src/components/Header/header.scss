@@ -1,0 +1,15 @@
+.image_detail {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    margin-left: 25%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    justify-content: space-between;
+}

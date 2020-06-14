@@ -1,0 +1,21 @@
+.pages {
+    display: flex;
+    flex-direction: row;
+}
+
+.routing {
+    width: 100%;
+}
+
+.foot {
+    position: relative;
+    top: -20px;
+}
+
+.bread_crumb {
+    margin: 20px 0;
+    position: absolute;
+    width: 85%;
+    top: 8%;
+    left: 5%;
+}

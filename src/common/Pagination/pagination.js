@@ -1,0 +1,17 @@
+import React from 'react'
+import { Pagination } from 'react-bootstrap'
+import './pagination.scss'
+
+function PaginationCommon() {
+    return (
+            <Pagination>
+            <Pagination.Prev />
+            <Pagination.Item active>{1}</Pagination.Item>
+            <Pagination.Item>{2}</Pagination.Item>
+            <Pagination.Item>{3}</Pagination.Item>
+            <Pagination.Next />
+            </Pagination>
+        );
+}
+
+export default PaginationCommon;

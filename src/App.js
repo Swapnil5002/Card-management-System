@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect} from 'react';
+import './App.scss';
+import Routing from './routing';
+import Sidebar from './components/Sidebar/sidebar';
+import Headers from './components/Header/header';
+// import Footer from './components/Footer/Footer';
+import BreadCrumbs from './common/BreadCrumb/breadcrumb';
+
 
 function App() {
+  const [shouldShow, setshouldShow] = useState(false);
+
+  useEffect(() => {
+    if(window.location.pathname !== '/login' || window.location.pathname == '') {
+      setshouldShow(true);
+    }
+  }, [window.location.pathname]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {shouldShow && <Headers/>}
+      <div className='pages'>
+        {shouldShow && <Sidebar/>}
+        {shouldShow && <div className='bread_crumb'><BreadCrumbs/></div>}
+        <div className='routing'>
+          <Routing/>
+        </div>
+      </div>
+      {/* {shouldShow && <div className='foot'><Footer/></div>} */}
     </div>
   );
 }
